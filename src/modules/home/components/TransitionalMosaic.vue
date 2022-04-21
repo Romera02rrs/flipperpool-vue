@@ -28,6 +28,7 @@ export default {
 <style scoped>
 
 .mosaic {
+    background-color: black;
     display: flex;
     justify-content: space-between;
     margin: 0px var(--second-margin-sides);
