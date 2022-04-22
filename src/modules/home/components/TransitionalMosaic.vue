@@ -28,20 +28,20 @@ export default {
 <style scoped>
 
 .mosaic {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px var(--second-margin-sides);
+  display: flex;
+  justify-content: space-between;
+  margin: 0px var(--second-margin-sides);
 }
 
 .mosaic div {
-    height: 300px;
-    width: calc(100% / 3 - 6px);
+  height: 300px;
+  width: calc(100% / 3 - 6px);
 }
 
 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 </style>
