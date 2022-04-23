@@ -4,9 +4,10 @@
       sectionTitle="Una larga experiencia<br>en el sector"
       sectionSubTitle="La mayor calidad y durabilidad a su alcance"
     />
-    <div class="imagen">
-      <div class="contenido">
-        <h5>Construímos mas de 30<br> piscinas anuales</h5>
+    <div class="image-container">
+      <img src="../assets/02.jpg">
+      <div class="content">
+        <h5>Construímos mas de 30 piscinas anuales</h5>
       </div>
     </div>
   </section>
@@ -22,15 +23,20 @@ export default {
 
 <style scoped>
 
-.imagen {
+.image-container {
   with: 100%;
   height: 300px;
-  background: center fixed url('../assets/02.jpg');
   filter: brightness(90%);
   position: relative;
 }
 
-.contenido {
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
   position: absolute;
   width: 75%;
   height: 50%;
