@@ -1,5 +1,5 @@
 <template>
-  <div v-if="orientation" class="hgroup-left">
+  <div v-if="orientationBool" class="hgroup-left">
     <h4 v-html="sectionSubTitle"></h4>
     <h3 v-html="sectionTitle"></h3>
   </div>
@@ -21,7 +21,7 @@ export default {
     },
     orientation: {
       type: String,
-      default: 'left'
+      default: 'left',
     },
   },
   data() {
@@ -45,7 +45,7 @@ export default {
 
 .hgroup-right {
   margin-bottom: 10px;
-  margin-left: var(--main-margin-sides);
+  margin-right: var(--main-margin-sides);
   text-align: right;
 }
 

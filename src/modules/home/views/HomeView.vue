@@ -2,17 +2,27 @@
   <Header :home="false" :imgProps="{alt: 'Pala Excavadora', src: require('@/modules/home/assets/piscinaMuroPiedra.jpg')}" title="Su Felicidad<br> En Construcción" />
   <transitional-mosaic />
   <parallax-image />
-  <transitional-mosaic />
+  <multi-mosaic />
+  <reviews-gallery />
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import TransitionalMosaic from '../components/TransitionalMosaic.vue'
 import ParallaxImage from '../components/ParallaxImage.vue'
+import MultiMosaic from '../components/MultiMosaic.vue'
+import ReviewsGallery from '../components/ReviewsGallery.vue'
+
+
 
 export default {
-  components: { Header, TransitionalMosaic, ParallaxImage },
-
+  components: { 
+    Header, 
+    TransitionalMosaic, 
+    ParallaxImage, 
+    MultiMosaic,
+    ReviewsGallery
+  },
 }
 </script>
 
