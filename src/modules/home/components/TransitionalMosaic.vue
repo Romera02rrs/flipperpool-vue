@@ -3,6 +3,7 @@
     <headline-group
       sectionTitle="Constructores de piscinas<br> a hormigón proyectado"
       sectionSubTitle="Construir es lo que hacemos"
+      orientation="left"
     />
     <div class="mosaic">
         <div>

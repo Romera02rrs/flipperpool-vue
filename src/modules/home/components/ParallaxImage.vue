@@ -3,6 +3,7 @@
     <headline-group
       sectionTitle="Una larga experiencia<br>en el sector"
       sectionSubTitle="La mayor calidad y durabilidad a su alcance"
+      orientation="right"
     />
     <div class="image-container">
       <img src="../assets/02.jpg">

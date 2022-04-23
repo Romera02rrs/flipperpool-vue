@@ -1,5 +1,5 @@
 <template>
-  <Header :home="false" :imgProps="{alt: 'Pala Excavadora', src: '@/modules/home/assets/grua.jpg'}" title="Su Felicidad<br> En Construcción" />
+  <Header :home="false" :imgProps="{alt: 'Pala Excavadora', src: require('@/modules/home/assets/piscinaMuroPiedra.jpg')}" title="Su Felicidad<br> En Construcción" />
   <transitional-mosaic />
   <parallax-image />
   <transitional-mosaic />

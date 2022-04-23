@@ -11,7 +11,7 @@
       <img
         class="imagen-header"
         :alt="imgProps.alt"
-        src="@/modules/home/assets/piscinaMuroPiedra.jpg"
+        :src="imgProps.src"
       />
     </div>
     <div class="content-header">
@@ -96,6 +96,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9;
 }
 
 .logo {
