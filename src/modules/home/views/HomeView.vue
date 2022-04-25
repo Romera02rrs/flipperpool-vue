@@ -4,6 +4,7 @@
   <parallax-image />
   <multi-mosaic />
   <reviews-gallery />
+  <input-email />
 </template>
 
 <script>
@@ -12,8 +13,7 @@ import TransitionalMosaic from '../components/TransitionalMosaic.vue'
 import ParallaxImage from '../components/ParallaxImage.vue'
 import MultiMosaic from '../components/MultiMosaic.vue'
 import ReviewsGallery from '../components/ReviewsGallery.vue'
-
-
+import InputEmail from '../components/InputEmail.vue'
 
 export default {
   components: { 
@@ -21,7 +21,8 @@ export default {
     TransitionalMosaic, 
     ParallaxImage, 
     MultiMosaic,
-    ReviewsGallery
+    ReviewsGallery,
+    InputEmail
   },
 }
 </script>

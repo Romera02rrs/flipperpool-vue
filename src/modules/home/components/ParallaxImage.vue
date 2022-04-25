@@ -16,7 +16,6 @@
 
 <script>
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
-import Header from '@/components/Header.vue';
 export default {
   components: { HeadlineGroup },
 };
