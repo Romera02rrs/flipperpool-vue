@@ -5,9 +5,11 @@
         sectionSubTitle="Siempre contentos con nuestro servicio"
         orientation="right"
     />
-    <div class="image-container">
+    <div class="reviews-container">
       <div class="content">
-        <h5>"Es una empresa familiar 100% recomendable y muy seria."</h5>
+        <i class="fa-solid fa-angle-left"></i>
+        <h5>‘ Es una empresa familiar 100% recomendable y muy seria ’</h5>
+        <i class="fa-solid fa-angle-right"></i>
       </div>
     </div>
   </section>
@@ -23,28 +25,31 @@ export default {
 
 <style scoped>
 
-.image-container {
-  with: 100%;
+.reviews-container {
+  width: 100%;
   height: 300px;
-  filter: brightness(90%);
   position: relative;
-  background-color: var(--main-color)
+  background-color: var(--main-color);
 }
 
 .content {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 75%;
-  height: 50%;
-  background-color: #8cccffaa;
-  z-index: 2;
-  left: calc(50% - (75% / 2));
-  top: calc(50% - (50% / 2));
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+i {
+  font-size: 24px;
+  color: #ffff;
+  margin: var(--main-margin-sides)
+}
+
 h5 {
+  display: inline-block;
+  width: 50%;
   text-align: center;
   font-size: 24px;
   color: white;
