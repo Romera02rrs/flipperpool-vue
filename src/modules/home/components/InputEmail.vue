@@ -39,12 +39,14 @@ export default {
 
 .content {
   display: flex;
+  //flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0px var(--second-margin-sides);
 }
 
 img {
-  height: 200px;
-  width: 100px;
+  height: 185px;
+  width: 85px;
   object-fit: cover;
 }
 

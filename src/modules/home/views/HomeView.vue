@@ -5,6 +5,7 @@
   <multi-mosaic />
   <reviews-gallery />
   <input-email />
+  <Footer />
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import ParallaxImage from '../components/ParallaxImage.vue'
 import MultiMosaic from '../components/MultiMosaic.vue'
 import ReviewsGallery from '../components/ReviewsGallery.vue'
 import InputEmail from '../components/InputEmail.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: { 
@@ -22,7 +24,8 @@ export default {
     ParallaxImage, 
     MultiMosaic,
     ReviewsGallery,
-    InputEmail
+    InputEmail,
+    Footer
   },
 }
 </script>

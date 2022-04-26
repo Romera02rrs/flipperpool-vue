@@ -103,6 +103,7 @@ nav {
   height: 35px;
   margin: 8px;
   margin-left: var(--main-margin-sides);
+  cursor: pointer;
 }
 
 #check {
@@ -148,6 +149,7 @@ h1 {
   margin-top: 10px;
   display: flex;
 }
+
 a {
   width: 110px;
   height: 40px;
@@ -171,10 +173,22 @@ a {
   color: white;
 }
 
+.btn-header :nth-child(1) div:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  transition: all 0.8s;
+}
+
 .btn-header :nth-child(2) div {
   border: 2px solid var(--main-color);
   background-color: transparent;
   color: white;
+}
+
+.btn-header :nth-child(2) div:hover {
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.8s;
 }
 
 .nav-menu .menu {

@@ -43,7 +43,13 @@ export default {
 i {
   font-size: 24px;
   color: #ffff;
-  margin: var(--main-margin-sides)
+  margin: var(--main-margin-sides);
+  cursor: pointer;
+}
+
+i:hover{
+  color: #000;
+  transition: all 1.5s;
 }
 
 h5 {
