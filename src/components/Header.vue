@@ -67,7 +67,10 @@ export default {
 
 <style scoped>
 header {
-  overflow: hidden;
+  height: 75vw;
+    min-height: 500px;
+    max-height: 90vh;
+    position: relative;
 }
 
 video {
@@ -78,9 +81,8 @@ video {
 }
 
 .imagen-header-container {
-   height: 75vw;
-    min-height: 500px;
-    max-height: 90vh;
+   width: 100%;
+   height: 100%;
 }
 
 .imagen-header {
@@ -93,14 +95,18 @@ video {
 .content-header {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 100%;
   top: 0;
   left: 0;
 }
 
 nav {
+  min-height: 60px;
+  height: 5vw;
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #8cccffaa;
   display: flex;
   align-items: center;
@@ -109,7 +115,8 @@ nav {
 }
 
 .logo {
-  height: 35px;
+  min-height: 40px;
+  height: 4vw;
   margin: 8px;
   margin-left: var(--main-margin-sides);
   cursor: pointer;
@@ -141,6 +148,8 @@ nav {
 }
 
 .titulo-header {
+  position: absolute;
+  z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -150,7 +159,7 @@ nav {
 
 h1 {
   color: #fff;
-  font-size: 2.5em;
+  font-size: var(--font-size-2);
   font-family: Default-bold;
   margin-top: 160px;
   width: 100%;
@@ -163,16 +172,14 @@ h1 {
 }
 
 a {
-  width: 110px;
-  height: 40px;
-  margin-right: 10px;
   cursor: pointer;
 }
 
 .btn-header div {
   width: 110px;
-  height: 40px;
-  font-size: 20px;
+    height: 40px;
+    font-size: 20px;
+  margin-right: 10px;
   font-family: Default-Light;
   display: flex;
   justify-content: center;
@@ -209,4 +216,5 @@ a {
   margin-right: var(--main-margin-sides);
   color: #fff;
 }
+
 </style>

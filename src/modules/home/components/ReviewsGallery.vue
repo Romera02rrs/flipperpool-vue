@@ -26,7 +26,9 @@ export default {
 
 .reviews-container {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
+  max-height: 70vh;
+  height: 50vw;
   position: relative;
   background-color: var(--main-color);
 }
@@ -41,7 +43,12 @@ export default {
 }
 
 i {
-  font-size: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  align-items: center;
+  font-size: var(--font-size-2);
   color: #ffff;
   margin: var(--main-margin-sides);
   cursor: pointer;
@@ -55,8 +62,9 @@ i:hover{
 h5 {
   display: inline-block;
   width: 50%;
+  heigth: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-size-4);
   color: white;
   margin: 15px;
 }

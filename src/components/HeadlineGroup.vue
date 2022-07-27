@@ -52,12 +52,12 @@ export default {
 h4 {
   color: #000000;
   font-family: Default-Light;
-  font-size: 15px;
+  font-size: var(--font-size-5); /*TODO: No usar medidas absolutas */
 }
 
 h3 {
   font-family: Default-Bold;
-  font-size: 24px;
+  font-size: var(--font-size-4); /*TODO: No usar medidas absolutas*/
   color: var(--main-color);
 }
 </style>

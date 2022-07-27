@@ -54,7 +54,7 @@ img {
 
 h5 {
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-size-4); /*TODO: No usar medidas absoultas*/
   color: white;
   margin: 15px;
 }
