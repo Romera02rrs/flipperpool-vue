@@ -1,3 +1,4 @@
+import Header from '@/components/Header.vue';
 <template>
   <header>
     <video v-if="home" autoplay muted loop>
@@ -17,7 +18,7 @@
     <div class="content-header">
       <nav>
         <img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool" />
-        <input type="checkbox" id="check" />
+        <input type="checkbox" id="check" v-on:click="muestraModal"/>
         <label for="check" class="bar-btn">
           <i class="fas fa-bars"></i>
         </label>
@@ -54,6 +55,12 @@ export default {
       type: String,
     },
   },
+  methods: {
+    muestraModal: function (params) {
+      var b = document.querySelector("input");
+      b.setAttribute('class', 'a')
+    }
+  }
 };
 </script>
 
@@ -71,7 +78,9 @@ video {
 }
 
 .imagen-header-container {
-  height: 500px;
+   height: 75vw;
+    min-height: 500px;
+    max-height: 90vh;
 }
 
 .imagen-header {
@@ -107,7 +116,7 @@ nav {
 }
 
 #check {
-  display: none;
+  visibility: hidden;
 }
 
 .bar-btn {
@@ -121,9 +130,12 @@ nav {
 .nav-menu {
   display: none;
   position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 53px;
   width: 100%;
-  height: 100%;
-  background-color: #8cccffbb;
+  height: 100vh;
+  background-color: black;
   text-align: center;
   transition: all 0.5s;
 }

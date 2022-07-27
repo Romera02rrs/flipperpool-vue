@@ -7,13 +7,13 @@
     />
     <div class="mosaic">
         <div>
-            <img src="../assets/levantar.jpg" alt="Proceso de levantar la piscina con ladrillos y hierros">
+            <img src="../assets/atzubia_1_editado.jpeg" alt="Proceso de levantar la piscina con ladrillos y hierros">
         </div>
         <div>
-            <img src="../assets/gunitado.jpg" alt="Piscina completamente gunitada">
+            <img src="../assets/atzubia_2.jpeg" alt="Piscina completamente gunitada">
         </div>
         <div>
-            <img src="../assets/terminado.jpg" alt="Piscina terminada con corona, escalera y chapado">
+            <img src="../assets/atzubia_3.jpeg" alt="Piscina terminada con corona, escalera y chapado">
         </div>
     </div>
   </section>
@@ -35,7 +35,9 @@ export default {
 }
 
 .mosaic div {
-  height: 300px;
+  min-height: 300px;
+  max-height: 80vh;
+  height: 50vw;
   width: calc(100% / 3 - 6px);
 }
 

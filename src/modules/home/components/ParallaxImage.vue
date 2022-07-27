@@ -24,8 +24,10 @@ export default {
 <style scoped>
 
 .image-container {
-  with: 100%;
-  height: 300px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 80vh;
+  height: 70vw;
   filter: brightness(90%);
   position: relative;
 }
@@ -34,6 +36,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
 }
 
 .content {

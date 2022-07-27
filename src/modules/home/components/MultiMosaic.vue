@@ -36,7 +36,9 @@ export default {
 
 img {
     padding: 10px 10px;
-    height: 150px;
+    min-height: 200px;
+    max-height: 50vh;
+    height: 20vw;
     object-fit: cover;
 }
 
