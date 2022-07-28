@@ -37,6 +37,10 @@ export default {
 
 <style scoped>
 
+section {
+  margin-bottom: 7vw;
+}
+
 .content {
   display: flex;
   //flex-wrap: wrap;
@@ -45,8 +49,10 @@ export default {
 }
 
 img {
-  height: 185px;
-  width: 85px;
+  min-height: 185px;
+  height: 40vw;
+  min-width: 85px;
+  width: 20vw;
   object-fit: cover;
 }
 
@@ -56,49 +62,56 @@ img {
 
 .front-image-right {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 4vw;
+  left: 4vw;
   border: 2px solid #fff;
 }
 
 .form {
   margin: 30px;
+  width: 40%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
   display: block;
   color: #000000;
   font-family: Default-Light;
-  font-size: 15px;
-  //font-weight: bold;
+  font-size: var(--font-size-5);
 }
 
 hr {
-  margin: 10px 0px;
+  width: 100%;
+  margin: 1.5vw 0px;
 }
 
 input {
   width: 100%;
   border: 2px solid var(--main-color);
-  padding: 5px;
-  margin: 5px 0px;
+  padding: 1vw;
+  margin: 1.5vw 0px;
+  font-size: var(--font-size-6);
 }
 
 button {
-  margin: 5px;
+  margin: 1.5vw 0px;
   background-color: var(--main-color);
   border: 0px;
-  width: 90px;
-  padding: 5px;
+  width: 20vw;
+  padding: 1vw;
   color: #fff;
   cursor: pointer;
+  font-size: var(--font-size-6)
 }
 
 .front-image-left {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 4vw;
+  right: 4vw;
   border: 2px solid #fff;
 }
 

@@ -43,6 +43,7 @@
   --main-margin-sides: 30px;
   --second-margin-sides: 15px;
 
+  --font-size-6: 10px;
   --font-size-5: 15px;
   --font-size-4: 24px;
   --font-size-3: 32px;
@@ -53,6 +54,7 @@
 
 @media (min-width: 768px){
  :root {
+  --font-size-6: 13px;
   --font-size-5: 18px;
   --font-size-4: 27px;
   --font-size-3: 35px;
@@ -63,6 +65,7 @@
 
 @media (min-width: 992px){
  :root {
+  --font-size-6: 17px;
   --font-size-5: 21px;
   --font-size-4: 30px;
   --font-size-3: 38px;
@@ -73,6 +76,7 @@
 
 @media (min-width: 1200px){
  :root {
+  --font-size-6: 21px;
   --font-size-5: 24px;
   --font-size-4: 33px;
   --font-size-3: 41px;
@@ -83,6 +87,7 @@
 
 @media (min-width: 1400px){
  :root {
+  --font-size-6: 25px;
   --font-size-5: 27px;
   --font-size-4: 36px;
   --font-size-3: 44px;
