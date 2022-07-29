@@ -43,7 +43,7 @@ img {
   position: absolute;
   width: 75%;
   height: 50%;
-  background-color: #8cccffaa;
+  background-color: var(--main-faded-color);
   z-index: 2;
   left: calc(50% - (75% / 2));
   top: calc(50% - (50% / 2));

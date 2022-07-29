@@ -16,7 +16,7 @@
         <label for="correo">Introduzca su correo electrónico</label>
         <hr>
         <input type="email" name="correo" id="correo" placeholder="example@info.com">
-        <button>Contactar</button>
+        <button class="btn">Contactar</button>
       </div>
       <div>
         <div class="back-image">
@@ -97,7 +97,7 @@ input {
   font-size: var(--font-size-6);
 }
 
-button {
+.btn {
   margin: 1.5vw 0px;
   background-color: var(--main-color);
   border: 0px;
@@ -105,7 +105,19 @@ button {
   padding: 1vw;
   color: #fff;
   cursor: pointer;
-  font-size: var(--font-size-6)
+  font-size: var(--font-size-6);
+  border: 1px solid white;
+}
+
+.btn:hover {
+  
+}
+
+.btn:hover {
+    
+  border: 1px solid black;
+  transition: all 0.5s;
+  color: black;
 }
 
 .front-image-left {

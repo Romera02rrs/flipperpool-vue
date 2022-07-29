@@ -22,12 +22,17 @@ import Header from '@/components/Header.vue';
         <label for="check" class="bar-btn">
           <i class="fas fa-bars"></i>
         </label>
-        <div class="nav-menu">
-          <router-link to="/">Inicio</router-link>
-          <router-link to="/empresa">Empresa</router-link>
-          <router-link to="/about">Galería</router-link>
-          <router-link to="/about">Ofertas</router-link>
-          <router-link to="/about">Contacto</router-link>
+        <div class="nav-menu" style="display: ">
+          <div class="close-button-container">
+            <button v-on:click="cierraModal" class="close-button">Close</button>
+          </div>
+          <div class="nav-options">
+            <router-link to="/">Inicio</router-link>
+            <router-link to="/empresa">Empresa</router-link>
+            <router-link to="/about">Galería</router-link>
+            <router-link to="/about">Ofertas</router-link>
+            <router-link to="/about">Contacto</router-link>
+          </div>
         </div>
       </nav>
       <div class="titulo-header">
@@ -56,9 +61,13 @@ export default {
     },
   },
   methods: {
-    muestraModal: function (params) {
-      var b = document.querySelector("input");
-      b.setAttribute('class', 'a')
+    muestraModal() {
+      const nav = document.querySelector(".nav-menu");
+      nav.setAttribute('style', '')
+    },
+    cierraModal() {
+      const modal = document.querySelector(".nav-menu")
+      modal.setAttribute('style', 'display: none')
     }
   }
 };
@@ -68,9 +77,9 @@ export default {
 <style scoped>
 header {
   height: 75vw;
-    min-height: 500px;
-    max-height: 90vh;
-    position: relative;
+  min-height: 500px;
+  max-height: 90vh;
+  position: relative;
 }
 
 video {
@@ -81,8 +90,8 @@ video {
 }
 
 .imagen-header-container {
-   width: 100%;
-   height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .imagen-header {
@@ -107,7 +116,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #8cccffaa;
+  background-color: var(--main-faded-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,16 +144,48 @@ nav {
 }
 
 .nav-menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   margin-top: 53px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: var(--main-color);
   text-align: center;
   transition: all 0.5s;
+  z-index: 99999;
+  margin: 0;
+
+
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.close-button-container {
+  width: 100%;
+  text-align: right;
+  padding: 15px 30px;
+}
+
+.close-button {
+}
+
+.nav-options{
+  display: flex;
+  flex-direction: column;
+  padding: 150px;
 }
 
 .titulo-header {
@@ -195,7 +236,7 @@ a {
 .btn-header :nth-child(1) div:hover {
   background-color: #fff;
   color: var(--main-color);
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .btn-header :nth-child(2) div {
@@ -207,7 +248,7 @@ a {
 .btn-header :nth-child(2) div:hover {
   background-color: var(--main-color);
   color: white;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .nav-menu .menu {

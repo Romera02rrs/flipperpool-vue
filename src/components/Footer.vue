@@ -79,7 +79,7 @@ i {
 .btn:hover {
     
     background-color: #fff;
-    transition: all 1s;
+    transition: all 0.5s;
     border-color: var(--main-color);
     color: var(--main-color)
 }
