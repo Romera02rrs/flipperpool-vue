@@ -53,7 +53,7 @@
   --font-size-1: 65px;
 }
 
-//TODO: Editar tamaños extra pequeños
+/*TODO: Editar tamaños extra pequeños*/
 @media (max-width: 362px){
  :root {
   --font-size-6: 5px;
