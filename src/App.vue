@@ -49,8 +49,19 @@
   --font-size-5: 15px;
   --font-size-4: 24px;
   --font-size-3: 32px;
-  --font-size-2: 50px;
+  --font-size-2: 45px;
   --font-size-1: 65px;
+}
+
+@media (max-width: 362px){
+ :root {
+  --font-size-6: 5px;
+  --font-size-5: 10px;
+  --font-size-4: 15px;
+  --font-size-3: 25px;
+  --font-size-2: 30px;
+  --font-size-1: 40px;
+  }
 }
 
 
@@ -71,7 +82,7 @@
   --font-size-5: 21px;
   --font-size-4: 30px;
   --font-size-3: 38px;
-  --font-size-2: 61px;
+  --font-size-2: 60px;
   --font-size-1: 75px;
   }
 }
@@ -82,7 +93,7 @@
   --font-size-5: 24px;
   --font-size-4: 33px;
   --font-size-3: 41px;
-  --font-size-2: 65px;
+  --font-size-2: 70px;
   --font-size-1: 80px;
   }
 }
@@ -93,7 +104,7 @@
   --font-size-5: 27px;
   --font-size-4: 36px;
   --font-size-3: 44px;
-  --font-size-2: 67px;
+  --font-size-2: 75px;
   --font-size-1: 83px;
   }
 }
