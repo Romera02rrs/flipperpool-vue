@@ -127,7 +127,7 @@ nav {
   min-height: 40px;
   height: 4vw;
   margin: 8px;
-  margin-left: var(--main-margin-sides);
+  padding-left: var(--main-margin-sides);
   cursor: pointer;
 }
 
@@ -137,8 +137,8 @@ nav {
 
 .bar-btn {
   font-size: 30px;
-  margin: 8px;
-  margin-right: var(--main-margin-sides);
+  padding: 8px;
+  padding-right: var(--main-margin-sides);
   color: #fff;
   cursor: pointer;
 }
