@@ -24,7 +24,7 @@ import Header from '@/components/Header.vue';
         </label>
         <div class="nav-menu" style="display: ">
           <div class="close-button-container">
-            <button v-on:click="cierraModal" class="close-button">Close</button>
+            <button v-on:click="cierraModal" class="close-button"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
@@ -180,12 +180,25 @@ nav {
 }
 
 .close-button {
+  border: none;
+  background-color: transparent;
+  font-size: var(--font-size-3);
+  cursor: pointer;
 }
 
 .nav-options{
   display: flex;
   flex-direction: column;
-  padding: 150px;
+  justify-content: space-between;
+  padding: 22vh 0 0 0;
+  height: 50%;
+}
+
+.nav-options a {
+  text-decoration: none;
+  color: white;
+  font-size: var(--font-size-4);
+  margin: 20px;
 }
 
 .titulo-header {
