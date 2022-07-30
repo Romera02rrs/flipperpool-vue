@@ -160,7 +160,7 @@ nav {
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 0.3s;
+	animation-duration: 0.5s;
 }
 
 @keyframes fadeInOpacity {
