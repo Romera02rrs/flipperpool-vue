@@ -184,13 +184,15 @@ nav {
   background-color: transparent;
   font-size: var(--font-size-3);
   cursor: pointer;
+  color: white;
 }
 
 .nav-options{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 22vh 0 0 0;
+  //padding: 22vh 0 0 0;
+  padding: 10vh 0 0 0;
   height: 50%;
 }
 
