@@ -38,6 +38,10 @@
   padding: 0;
 }
 
+*:hover {
+  background-color: transparent;
+}
+
 :root {
   --main-color: #8cccff;
   --main-faded-color: #8cccffaa;
@@ -53,6 +57,7 @@
   --font-size-1: 65px;
 }
 
+//TODO: Editar tamaños extra pequeños
 @media (max-width: 362px){
  :root {
   --font-size-6: 5px;
