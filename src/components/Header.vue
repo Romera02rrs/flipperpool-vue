@@ -152,7 +152,6 @@ nav {
   height: 100vh;
   background-color: var(--main-color);
   text-align: center;
-  transition: all 0.5s;
   margin: 0;
 
 
