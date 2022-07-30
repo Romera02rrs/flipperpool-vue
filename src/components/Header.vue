@@ -155,14 +155,12 @@ nav {
   margin: 0;
 
 
-  opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-@keyframes fadeInOpacity {
+@keyframes fadeInAnimation {
 	0% {
 		opacity: 0;
 	}
