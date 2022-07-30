@@ -23,8 +23,8 @@ import Header from '@/components/Header.vue';
           <i class="fas fa-bars"></i>
         </label>
         <div class="nav-menu" style="display: ">
-          <div class="close-button-container">
-            <button v-on:click="cierraModal" class="close-button"><i class="fa-solid fa-xmark"></i></button>
+          <div  v-on:click="cierraModal" class="close-button-container">
+            <button class="close-button"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
@@ -132,7 +132,7 @@ nav {
 }
 
 #check {
-  visibility: hidden;
+  display: none;
 }
 
 .bar-btn {
@@ -153,10 +153,9 @@ nav {
   background-color: var(--main-color);
   text-align: center;
   transition: all 0.5s;
-  z-index: 99999;
   margin: 0;
 
-
+  transition: all 0.5 ease-in;
   opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
@@ -176,7 +175,7 @@ nav {
 .close-button-container {
   width: 100%;
   text-align: right;
-  padding: 15px 30px;
+  padding: 12px 33px;
 }
 
 .close-button {
