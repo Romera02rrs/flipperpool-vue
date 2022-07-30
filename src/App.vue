@@ -38,10 +38,6 @@
   padding: 0;
 }
 
-*:hover {
-  background-color: transparent;
-}
-
 :root {
   --main-color: #8cccff;
   --main-faded-color: #8cccffaa;
