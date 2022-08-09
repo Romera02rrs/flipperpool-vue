@@ -1,5 +1,9 @@
 <template>
-
+    <a href="whatsapp://send?text=Hola, soy de ... Estoy interesado en ...">
+        <div class="whatsapp-container">
+            <img class="logo" src="@/assets/img/whatsapp.png">
+        </div>
+    </a>
     <div class="content">
         <div class="box">
             <img class="logo" src="@/assets/img/logo.png">
@@ -32,6 +36,18 @@
 </template>
 
 <style scoped>
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+}
+
+.whatsapp-container img {
+    min-height: 80px;
+    height: 7vw;
+    cursor: pointer;
+}
 
 p {
     margin: 5px;

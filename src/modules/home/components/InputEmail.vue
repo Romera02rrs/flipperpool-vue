@@ -12,7 +12,7 @@
             <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg">
         </div>
       </div>
-      <form class="form">
+      <form class="form" method="post" action="/">
         <label for="correo">Introduzca su correo electrónico</label>
         <hr>
         <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com">

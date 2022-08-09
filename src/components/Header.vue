@@ -38,7 +38,7 @@ import Header from '@/components/Header.vue';
       <div class="titulo-header">
         <h1 v-html="title"></h1>
         <div v-if="true" class="btn-header">
-          <a><div>Contacto</div></a>
+          <a href="mailto:info@flipperpool.com" target="_blank"><div>Contacto</div></a>
           <a><div>Galería</div></a>
         </div>
       </div>
@@ -225,6 +225,7 @@ h1 {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-header div {
