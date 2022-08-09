@@ -22,7 +22,7 @@ import Header from '@/components/Header.vue';
         <label for="check" class="bar-btn">
           <i class="fas fa-bars"></i>
         </label>
-        <div class="nav-menu" style="display: ">
+        <div class="nav-menu" style="display: none">
           <div class="close-button-container">
             <button v-on:click="cierraModal" class="close-button"><i class="fa-solid fa-xmark"></i></button>
           </div>
@@ -155,7 +155,7 @@ nav {
   margin: 0;
 
 
-  animation: fadeInAnimation ease 1s;
+  animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

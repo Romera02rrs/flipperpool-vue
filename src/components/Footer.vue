@@ -20,7 +20,7 @@
         </div>
         <div class="box">
             <p class="box-title">Información</p>
-            <p><a href="mailto:info@flipperpool.com">info@flipperpool.com</a></p>
+            <p><a href="mailto:info@flipperpool.com" target="_blank">info@flipperpool.com</a></p>
             <p><a href="tel:+34661260491">661-260-491</a></p>
         </div>
         <div class="box">

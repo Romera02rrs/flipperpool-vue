@@ -12,12 +12,12 @@
             <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg">
         </div>
       </div>
-      <div class="form">
+      <form class="form">
         <label for="correo">Introduzca su correo electrónico</label>
         <hr>
-        <input type="email" name="correo" id="correo" placeholder="example@info.com">
-        <button class="btn">Contactar</button>
-      </div>
+        <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com">
+        <button type="submit" class="btn">Contactar</button>
+      </form>
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
@@ -31,6 +31,20 @@
 <script>
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 export default {
+  data() {
+    return { 
+      inputData: null
+    }
+  },
+  watch: {
+    inputData(value) {
+
+      console.log(this.inputData)
+      console.log({ value });
+      console.log(inputData)
+
+    }
+  },
   components: { HeadlineGroup },
 };
 </script>
