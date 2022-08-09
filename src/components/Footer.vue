@@ -1,5 +1,5 @@
 <template>
-    <a href="whatsapp://send?text=Hola, soy de ... Estoy interesado en ...">
+    <a href="whatsapp://send?text=Hola, soy de ... Estoy interesado en ...&phone=+34661260491&abid=+34661260491">
         <div class="whatsapp-container">
             <img class="logo" src="@/assets/img/whatsapp.png">
         </div>
