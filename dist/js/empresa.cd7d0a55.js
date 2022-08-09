@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkflipperpool"]=self["webpackChunkflipperpool"]||[]).push([[382],{8509:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var o=r(3396);function p(e,n,r,p,t,u){const c=(0,o.up)("Header");return(0,o.wg)(),(0,o.j4)(c)}var t=r(7047),u={components:{Header:t.Z}},c=r(89);const a=(0,c.Z)(u,[["render",p]]);var f=a}}]);
-//# sourceMappingURL=empresa.cd7d0a55.js.map

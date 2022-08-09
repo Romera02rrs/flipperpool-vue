@@ -1,5 +1,5 @@
 <template>
-    <a href="whatsapp://send?text=Hola, soy de ... Estoy interesado en ...&phone=+34661260491&abid=+34661260491">
+    <a href="whatsapp://send?phone=+34661260491&abid=+34661260491">
         <div class="whatsapp-container">
             <img class="logo" src="@/assets/img/whatsapp.png">
         </div>
@@ -41,12 +41,19 @@
     position: fixed;
     bottom: 2vw;
     right: 2vw;
+    animation: float 1s infinite ease-in-out alternate;
 }
 
 .whatsapp-container img {
     min-height: 80px;
     height: 7vw;
     cursor: pointer;
+}
+
+@keyframes float {
+    100% {
+        transform: translateY(20px);
+    }
 }
 
 p {
