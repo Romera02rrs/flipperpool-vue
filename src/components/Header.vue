@@ -1,14 +1,16 @@
 import Header from '@/components/Header.vue';
 <template>
   <header>
-    <video v-if="home" autoplay muted loop>
+    <!-- <video v-if="home" autoplay muted loop>
       <source
         src="https://video.wixstatic.com/video/c837a6_ae4f4741c31844bfba715de2983231fd/1080p/mp4/file.mp4"
         type="video/mp4"
       />
-    </video>
-
+    </video> 
     <div v-else class="imagen-header-container">
+    -->
+
+    <div class="imagen-header-container">
       <img
         class="imagen-header"
         :alt="imgProps.alt"
@@ -28,16 +30,16 @@ import Header from '@/components/Header.vue';
           </div>
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
-            <router-link to="/empresa">Empresa</router-link>
-            <router-link to="/about">Galería</router-link>
-            <router-link to="/about">Ofertas</router-link>
-            <router-link to="/about">Contacto</router-link>
+            <!-- <router-link to="/empresa">Empresa</router-link> -->
+            <router-link to="/galeria">Galería</router-link>
+            <!-- <router-link to="/about">Ofertas</router-link> -->
+            <!-- <router-link to="/about">Contacto</router-link> -->
           </div>
         </div>
       </nav>
       <div class="titulo-header">
         <h1 v-html="title"></h1>
-        <div v-if="true" class="btn-header">
+        <div v-if="home" class="btn-header">
           <a href="mailto:info@flipperpool.com" target="_blank"><div>Contacto</div></a>
           <a><div>Galería</div></a>
         </div>

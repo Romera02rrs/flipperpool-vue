@@ -6,9 +6,9 @@
       orientation="right"
     />
     <div class="image-container">
-      <img src="../assets/02.jpg">
+      <img src="../assets/recorte-1.jpeg">
       <div class="content">
-        <h5>Construímos mas de 30 piscinas anuales</h5>
+        <h5>Empresa especializada en la construcción<br> de psicinas desde 1991</h5>
       </div>
     </div>
   </section>
@@ -57,6 +57,7 @@ h5 {
   font-size: var(--font-size-4); /*TODO: No usar medidas absoultas*/
   color: white;
   margin: 15px;
+  line-height: var(--font-size-3);
 }
 
 </style>

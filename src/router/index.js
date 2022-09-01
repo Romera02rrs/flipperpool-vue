@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import HomeView from '@/modules/home/views/HomeView.vue'
+//import GaleriaView from '@/modules/galeria/views/GalriaView.vue'
 
 const routes = [
   {
@@ -9,9 +10,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/empresa',
-    name: 'empresa',
-    component: () => import(/* webpackChunkName: "empresa" */ '@/views/EmpresaView.vue')
+    path: '/galeria',
+    name: 'galeria',
+    component: () => import(/* webpackChunkName: "galeria" */ '@/modules/galeria/views/GaleriaView.vue')
   },
   {
     path: '/:pathMatch(.*)*',
