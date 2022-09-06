@@ -18,7 +18,7 @@ import Header from '@/components/Header.vue';
       />
     </div>
     <div class="content-header">
-      <nav>
+      <nav id="nav">
         <img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool" />
         <input type="checkbox" id="check" v-on:click="muestraModal"/>
         <label for="check" class="bar-btn">
@@ -122,7 +122,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 9;
+  z-index: 3;
 }
 
 .logo {

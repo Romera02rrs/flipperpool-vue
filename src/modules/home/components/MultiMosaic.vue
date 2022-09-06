@@ -6,12 +6,12 @@
         orientation="left"
     />
     <div class="mosaic">
-        <img src="../assets/02.jpg" alt="Piscina">
-        <img src="../assets/01.jpg" alt="Piscina">
-        <img src="../assets/03.jpg" alt="Piscina">
-        <img src="../assets/06.jpg" alt="Piscina">
-        <img src="../assets/04.jpg" alt="Piscina">
-        <img src="../assets/05.jpg" alt="Piscina">
+        <img src="../assets/02.jpg" alt="Piscina" loading="lazy">
+        <img src="../assets/01.jpg" alt="Piscina" loading="lazy">
+        <img src="../assets/03.jpg" alt="Piscina" loading="lazy">
+        <img src="../assets/06.jpg" alt="Piscina" loading="lazy">
+        <img src="../assets/04.jpg" alt="Piscina" loading="lazy">
+        <img src="../assets/05.jpg" alt="Piscina" loading="lazy">
     </div>
   </section>
 </template>

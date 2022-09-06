@@ -1,36 +1,182 @@
 <template>
   <section>
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
-        <img src="../assets/casaMadera.jpg" alt="Piscina">
+        <img @click="click" id="imagen-1" src="../assets/galeria-1.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-2" src="../assets/galeria-2.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-3" src="../assets/galeria-3.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-4" src="../assets/galeria-4.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-5" src="../assets/galeria-5.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-6" src="../assets/galeria-6.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-7" src="../assets/galeria-7.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-8" src="../assets/galeria-8.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-9" src="../assets/galeria-9.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-10" src="../assets/galeria-10.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-11" src="../assets/galeria-11.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-12" src="../assets/galeria-12.jpg" alt="Piscina" loading="lazy">
+        <img @click="click" id="imagen-13" src="../assets/galeria-13.jpg" alt="Piscina" loading="lazy">
   </section>
+  <div class="lightbox inactivo" id="lightbox">
+    <div class="cerrar"><button @click="cerrar"><i class="fa-solid fa-xmark"></i></button></div>
+
+    <img id="imagenLightbox" class="grande" src="../assets/galeria-12.jpg" alt="Piscina">
+  </div>
 </template>
 
 <script>
+  export default {
+     methods: {
+      click(e) {
+        let nav = document.getElementById("nav");
+        nav.setAttribute('style', 'display: none')
+        let lightbox = document.getElementById('lightbox')
+        let imagen = document.getElementById('imagenLightbox')
+        let src = e.target.src
+
+        lightbox.classList.remove("inactivo")
+        imagen.setAttribute('src', src)
+      },
+      cerrar() {
+        let lightbox = document.getElementById('lightbox')
+        let imagen = document.getElementById('imagenLightbox')
+
+        nav.setAttribute('style', '')
+        lightbox.classList.add("inactivo")
+        imagen.setAttribute('src', '')
+
+      }
+  },
+};
 </script>
 
 <style scoped>
-    section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: var(--main-margin-sides);
-        overflow: hidden;
-    }
+  
+  .inactivo{
+    display: none !important; 
+  }
 
-    img {
-    
+  .lightbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-faded-color);
+    z-index: 4;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .lightbox .cerrar {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    color: white;
+  }
+
+  .lightbox .cerrar button {
+    font-size: var(--font-size-2);
+    cursor: pointer;
+    background-color: inherit;
+    padding: 15px 50px;
+    border: none;
+  }
+
+  .lightbox .cerrar button i {
+    color: white;
+  }
+
+  .lightbox .grande {
+
+    margin-top: 30px;
+    height: 90%;
+    max-width: 80%;
+    background: white;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: var(--main-margin-sides);
+    overflow: hidden;
+  }
+
+  img {
+  
     padding: 10px 10px;
     min-height: 250px;
     max-height: 70vh;
     height: 30vw;
     object-fit: cover;
-    }
+    transition: all .5s ease;
+    overflow: hidden;
+  }
+
+  section img:hover {
+    transform: scale(1.05);
+  }
+
+  #imagen-1{
+    width: 40%;
+  }
+
+  #imagen-2{
+    width: 20%;
+  }
+
+  #imagen-3{
+    width: 40%;
+  }
+
+  #imagen-4{
+    width: 70%;
+  }
+
+  #imagen-5{
+    width: 30%;
+  }
+
+  #imagen-6{
+    width: 20%;
+  }
+
+  #imagen-7{
+    width: 20%;
+  }
+
+  #imagen-8{
+    width: 60%;
+  }
+
+  #imagen-9{
+    width: 50%;
+  }
+
+  #imagen-10{
+    width: 50%;
+  }
+
+  #imagen-11{
+    width: 70%;
+  }
+
+  #imagen-12{
+    width: 30%;
+  }
+
+  #imagen-13{
+    width: 100%;
+  }
 </style>

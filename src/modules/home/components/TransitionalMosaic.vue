@@ -7,13 +7,13 @@
     />
     <div class="mosaic">
         <div>
-            <img src="../assets/atzubia_1_editado.jpeg" alt="Proceso de levantar la piscina con ladrillos y hierros">
+            <img src="../assets/atzubia_1_editado.jpeg" alt="Proceso de levantar la piscina con ladrillos y hierros" loading="lazy">
         </div>
         <div>
             <img src="../assets/atzubia_2.jpeg" alt="Piscina completamente gunitada">
         </div>
         <div>
-            <img src="../assets/atzubia_3.jpeg" alt="Piscina terminada con corona, escalera y chapado">
+            <img src="../assets/atzubia_3.jpeg" alt="Piscina terminada con corona, escalera y chapado" loading="lazy">
         </div>
     </div>
   </section>

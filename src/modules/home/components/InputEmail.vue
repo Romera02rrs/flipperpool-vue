@@ -9,7 +9,7 @@
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-            <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg">
+            <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg" loading="lazy">
         </div>
       </div>
       <form class="form" method="post" action="/">
@@ -21,7 +21,7 @@
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-            <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg">
+            <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg" loading="lazy">
         </div>
       </div>
     </div>
