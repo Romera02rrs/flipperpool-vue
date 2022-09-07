@@ -113,12 +113,13 @@
     overflow: hidden;
   }
 
+
   img {
   
     padding: 10px 10px;
-    min-height: 250px;
+    min-height: 150px;
     max-height: 70vh;
-    height: 30vw;
+    height: 25vw;
     object-fit: cover;
     transition: all .5s ease;
     overflow: hidden;
@@ -129,11 +130,11 @@
   }
 
   #imagen-1{
-    width: 40%;
+    width: 35%;
   }
 
   #imagen-2{
-    width: 20%;
+    width: 25%;
   }
 
   #imagen-3{
@@ -149,23 +150,23 @@
   }
 
   #imagen-6{
-    width: 20%;
+    width: 25%;
   }
 
   #imagen-7{
-    width: 20%;
+    width: 30%;
   }
 
   #imagen-8{
-    width: 60%;
+    width: 45%;
   }
 
   #imagen-9{
-    width: 50%;
+    width: 45%;
   }
 
   #imagen-10{
-    width: 50%;
+    width: 55%;
   }
 
   #imagen-11{

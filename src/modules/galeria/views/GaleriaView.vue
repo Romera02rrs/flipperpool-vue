@@ -1,5 +1,5 @@
 <template>
-  <Header :home="false" :imgProps="{alt: 'Piscina elegante con muros de piedra', src: require('@/modules/galeria/assets/casaMadera.jpg')}" title="Su Felicidad<br> En Construcción" />
+  <Header :home="false" :imgProps="{alt: 'Piscina de madera en Francia', src: require('@/modules/galeria/assets/casaMadera.jpg')}" title="Galería" />
   <Gallery />
   <Footer />
 </template>
