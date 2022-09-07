@@ -49,6 +49,10 @@
 
 <style scoped>
   
+  section {
+  margin-bottom: 7vw;
+}
+
   .inactivo{
     display: none !important; 
   }
@@ -109,7 +113,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: var(--main-margin-sides);
+    margin: 50px var(--main-margin-sides);
     overflow: hidden;
   }
 

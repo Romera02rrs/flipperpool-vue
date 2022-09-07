@@ -33,7 +33,7 @@ import Header from '@/components/Header.vue';
             <!-- <router-link to="/empresa">Empresa</router-link> -->
             <router-link to="/galeria">Galería</router-link>
             <!-- <router-link to="/about">Ofertas</router-link> -->
-            <!-- <router-link to="/about">Contacto</router-link> -->
+            <router-link to="/contacto">Contacto</router-link>
           </div>
         </div>
       </nav>

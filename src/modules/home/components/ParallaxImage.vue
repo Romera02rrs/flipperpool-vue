@@ -6,9 +6,9 @@
       orientation="right"
     />
     <div class="image-container">
-      <img src="../assets/recorte-1.jpeg">
+      <img src="../assets/levantar.jpg">
       <div class="content">
-        <h5>Empresa especializada en la construcción<br> de psicinas desde 1991</h5>
+        <h5>Construímos piscinas<br>desde 1991</h5>
       </div>
     </div>
   </section>

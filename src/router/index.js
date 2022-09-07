@@ -15,6 +15,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "galeria" */ '@/modules/galeria/views/GaleriaView.vue')
   },
   {
+    path: '/contacto',
+    name: 'contacto',
+    component: () => import(/* webpackChunkName: "contacto" */ '@/modules/contacto/views/ContactoView.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'noPageFound',
     component: () => import(/* webpackChunkName: "noPageFound" */ '@/views/NoPageFound.vue')
@@ -22,6 +27,8 @@ const routes = [
 ]
 
 const router = createRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   history: createWebHashHistory(),
   routes
 })

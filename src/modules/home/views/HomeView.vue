@@ -4,7 +4,7 @@
   <parallax-image />
   <multi-mosaic />
   <reviews-gallery />
-  <input-email />
+  <!-- <input-email /> -->
   <Footer />
 </template>
 

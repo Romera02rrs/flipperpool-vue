@@ -12,7 +12,7 @@
             <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg" loading="lazy">
         </div>
       </div>
-      <form class="form" method="post" action="/">
+      <form  @submit.prevent="onSubmit" class="form" method="post" action="procesaEmail.php">
         <label for="correo">Introduzca su correo electrónico</label>
         <hr>
         <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com">
@@ -36,12 +36,10 @@ export default {
       inputData: null
     }
   },
-  watch: {
-    inputData(value) {
+  methods: {
+   
+    onSubmit() {
 
-      console.log(this.inputData)
-      console.log({ value });
-      console.log(inputData)
 
     }
   },
