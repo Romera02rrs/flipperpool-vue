@@ -38,9 +38,11 @@ export default {
   },
   methods: {
    
-    onSubmit() {
+    onSubmit(value) {
 
-
+      let email = (value.target[0].value);
+      
+      this.$router.push({path: 'contacto', props: {completedEmail: "PAPA"}})
     }
   },
   components: { HeadlineGroup },

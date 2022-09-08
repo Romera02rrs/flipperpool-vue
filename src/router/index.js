@@ -17,6 +17,9 @@ const routes = [
   {
     path: '/contacto',
     name: 'contacto',
+    props: {
+      completedEmail: String
+    },
     component: () => import(/* webpackChunkName: "contacto" */ '@/modules/contacto/views/ContactoView.vue')
   },
   {

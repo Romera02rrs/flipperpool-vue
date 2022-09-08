@@ -31,9 +31,9 @@ import Header from '@/components/Header.vue';
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
             <!-- <router-link to="/empresa">Empresa</router-link> -->
-            <router-link to="/galeria">Galería</router-link>
+            <router-link to="galeria">Galería</router-link>
             <!-- <router-link to="/about">Ofertas</router-link> -->
-            <router-link to="/contacto">Contacto</router-link>
+            <router-link to="contacto">Contacto</router-link>
           </div>
         </div>
       </nav>
@@ -49,7 +49,19 @@ import Header from '@/components/Header.vue';
 </template>
 
 <script>
+
+let fontSize
+
 export default {
+  computed: {
+    calcularFontSize(){
+      if (this.home) {
+        return this.fontSize = 'var(--font-size-2)'
+      }else{
+        return this.fontSize = 'var(--font-size-1)'
+      }
+    }
+  },
   props: {
     home: {
       type: Boolean,
@@ -213,7 +225,7 @@ nav {
 
 h1 {
   color: #fff;
-  font-size: var(--font-size-2);
+  font-size: v-bind(calcularFontSize);
   font-family: Default-bold;
   margin-top: 160px;
   width: 100%;

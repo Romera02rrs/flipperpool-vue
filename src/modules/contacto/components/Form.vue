@@ -7,14 +7,14 @@
     />
     <div class="content">
         <div class="form-container">
-            <form action="" method="post">
+            <form action="procesaEmail.php" method="post">
                 <div>
-                    <label for="name">Name</label>
+                    <label for="name">Nombre</label>
                     <input id="name" type="text" name="name">
                 </div>
 
                 <div>
-                    <label for="email">Email</label>
+                    <label for="email">Correo</label>
                     <input id="email" type="email" name="email">
                 </div>
 
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="select-container">
-                    <select name="dir">
+                    <select name="address">
                         <option value="Alicante">Dirección</option>
                         <option value="Alicante">Alicante</option>
                     </select>
@@ -38,7 +38,7 @@
             </form>
         </div>
         <div class="image-container">
-            <img src="../assets/pexels-piscina.jpg" alt="Logo Flipperpool" />
+            <img src="../assets/pexels-palmera.jpg" alt="Logo Flipperpool" />
         </div>
     </div>
   </section>
@@ -47,11 +47,13 @@
 <script>
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 export default {
-  data() {return { }},
-  methods: {
-   
-  },
-  components: { HeadlineGroup },
+    data() {
+        return { }
+    },
+    props: {
+        completedEmail: String
+    },
+    components: { HeadlineGroup },
 };
 </script>
 
@@ -78,8 +80,7 @@ form {
 }
 
 .image-container {
-    width: 25%;
-    overflow: hidden;
+    width: 35%;
 }
 
 .double-column {
@@ -87,14 +88,18 @@ form {
 }
 
 textarea{
+    padding: 8px;
     margin-top: 10px;
     width: 100%;
     resize: none;
     height: 100px;
     border: 2px solid var(--main-color);
+    font-size: var(--font-size-5)
 }
 
 img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -108,9 +113,11 @@ label {
 }
 
 input {
+    margin-top: 5px;
     border: none;
     border-bottom: 2px solid var(--main-color);
     width: 100%;
+    font-size: var(--font-size-5)
 }
 
 .select-container{
@@ -128,7 +135,9 @@ select{
 
 .send-button {
     background-color: transparent;
-    font-size: var(--font-size-4);
+    width: 70%;
+    padding: 10px;
+    font-size: var(--font-size-5);
     cursor: pointer;
     border: 2px solid var(--main-color);
 }
@@ -143,10 +152,19 @@ select{
 
     form {
         grid-template-columns: none;
+        width: 80%;
+    }
+
+    .image-container {
+        width: 50%
     }
 
     .double-column {
         grid-column: 1/1;
+    }
+
+    .send-button {
+        width: 40%;
     }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <Header :home="false" :imgProps="{alt: 'Piscina de madera en Francia', src: require('@/modules/contacto/assets/pexels-piscina.jpg')}" title="Contacto" />
-  <Form />
+  <Form :completedEmail="completedEmail" />
   <Footer />
 </template>
 
@@ -10,6 +10,9 @@ import Form from '../components/Form.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
+  props: {
+    completedEmail: String
+  },
   components: { 
     Header,
     Form,
