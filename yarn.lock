@@ -5228,6 +5228,11 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+vue-demi@^0.12.1:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.5.tgz#8eeed566a7d86eb090209a11723f887d28aeb2d1"
+  integrity sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -5241,6 +5246,13 @@ vue-loader@^17.0.0:
     chalk "^4.1.0"
     hash-sum "^2.0.0"
     loader-utils "^2.0.0"
+
+vue-recaptcha@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-recaptcha/-/vue-recaptcha-2.0.2.tgz#22f323089ff15f4eacde26215ca61ac4806d009a"
+  integrity sha512-bE5WMz9jyiiY1PlaBOSUvsgTZ/ONoRV7Oq4Fn4JVz//ul+DJ0LHIJERfoF0NNEIDWXv6GjhwGLveGhoq0sEerg==
+  dependencies:
+    vue-demi "^0.12.1"
 
 vue-router@^4.0.3:
   version "4.0.14"

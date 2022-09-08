@@ -46,7 +46,7 @@
   --second-margin-sides: 15px;
 
   --font-size-6: 10px;
-  --font-size-5: 15px;
+  --font-size-5: 18px;
   --font-size-4: 24px;
   --font-size-3: 32px;
   --font-size-2: 45px;
@@ -69,7 +69,7 @@
 @media (min-width: 768px){
  :root {
   --font-size-6: 13px;
-  --font-size-5: 18px;
+  --font-size-5: 22px;
   --font-size-4: 27px;
   --font-size-3: 35px;
   --font-size-2: 55px;

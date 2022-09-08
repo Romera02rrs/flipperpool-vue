@@ -42,7 +42,7 @@ export default {
 
       let email = (value.target[0].value);
       
-      this.$router.push({path: 'contacto', props: {completedEmail: "PAPA"}})
+      this.$router.push({name: 'contacto', params: {completedEmail: email}})
     }
   },
   components: { HeadlineGroup },

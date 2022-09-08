@@ -47,19 +47,19 @@ try {
     $errores[] = "Teléfono ({$e->getMessage()})";
 }
 
-try {
+/*try {
     validate_empty($aux["address"]);
     $data["address"] = clean($aux["address"][0]);
 }catch (ValidationException $e){
     $errores[] = "Dirección ({$e->getMessage()})";
-}
-
-/*try {
-    validate_array_contains($aux["menu"],["lasaña", "sopa", "tortilla", "arroz"]);
-    $data["menu"] = $aux["menu"];
-}catch (ValidationException $e){
-    $errores[] = "Menu ({$e->getMessage()})";
 }*/
+
+try {
+    validate_array_contains($aux["address"],["A Coruña", "Álava", "Albacete", "Alicante", "Almería", "Asturias", "Ávila", "Badajoz", "Baleares", "Barcelona", "Burgos", "Cáceres", "Cádiz", "Cantabria", "Castellón", "Ciudad Real", "Córdoba", "Cuenca", "Girona", "Granada", "Guadalajara", "Gipuzkoa", "Huelva", "Huesca", "Jaén", "La Rioja", "Las Palmas", "León", "Lérida", "Lugo", "Madrid", "Málaga", "Murcia", "Navarra", "Ourense", "Palencia", "Pontevedra", "Salamanca", "Segovia", "Sevilla", "Soria", "Tarragona", "Santa Cruz de Tenerife", "Teruel", "Toledo", "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza"]);
+    $data["address"] = $aux["address"];
+}catch (ValidationException $e){
+    $errores[] = "Dirección ({$e->getMessage()})";
+}
 
 try {
     validate_string($aux["message"]);
@@ -129,10 +129,18 @@ if ($errores){
 </html>
 EOT;
 
+
+//para el envío en formato HTML
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+
+//dirección del remitente
     $headers .= "From: {$data["name"]} <{$data["email"]}>\r\n";
+
+//dirección de respuesta, si queremos que sea distinta que la del remitente
     $headers .= "Reply-To: {$data["email"]}\r\n";
+
+//direcciones que recibirán copia oculta
     $headers .= "Bcc: {$data["email"]}\r\n";
 
     mail($destinatario, $asunto, $cuerpo, $headers);
