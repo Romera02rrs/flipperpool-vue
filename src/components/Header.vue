@@ -19,7 +19,7 @@ import Header from '@/components/Header.vue';
     </div>
     <div class="content-header">
       <nav id="nav">
-        <img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool" />
+        <router-link to="/"><img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool" /></router-link>
         <input type="checkbox" id="check" v-on:click="muestraModal"/>
         <label for="check" class="bar-btn">
           <i class="fas fa-bars"></i>
@@ -40,8 +40,8 @@ import Header from '@/components/Header.vue';
       <div class="titulo-header">
         <h1 v-html="title"></h1>
         <div v-if="home" class="btn-header">
-          <a href="mailto:info@flipperpool.com" target="_blank"><div>Contacto</div></a>
-          <a><div>Galería</div></a>
+          <router-link to="contacto"><div>Contacto</div></router-link>
+           <router-link to="galeria"><div>Galería</div></router-link>
         </div>
       </div>
     </div>

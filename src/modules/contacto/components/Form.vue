@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 import { VueRecaptcha } from 'vue-recaptcha';
 export default {
@@ -62,10 +63,21 @@ export default {
     },
     methods: {
         verifyMethod( response ) {
-            this.captchaResponse = response;
+            this.captchaResponse = response
+        },
+        scrollTo() {
+            if (this.completedEmail) {
+                let ele = document.getElementById('name')
+                let coords = ele.getBoundingClientRect()
+                window.scrollTo(coords.x, coords.y)
+                ele.select()
+            }
         }
     },
-    components: { HeadlineGroup, VueRecaptcha }
+    components: { HeadlineGroup, VueRecaptcha },
+    mounted() { 
+        this.scrollTo();
+    }
 };
 </script>
 

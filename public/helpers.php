@@ -32,6 +32,21 @@ function validate_email(string $string)
         throw new InvalidEmailValidationException();
 }
 
+function validate_telephone(string $number)
+{
+    
+    $number = intval($number);
+    if (empty($number))
+        throw new RequiredValidationException();
+    if (!filter_var($number, FILTER_VALIDATE_INT));
+        throw new ValidationException();
+    $number = strval($number);
+    if (strlen($number) > 9)
+        throw new TooLongValidationException();
+        if (strlen($number) < 9)
+        throw new TooShortValidationException();
+}
+
 function validate_empty($value){
     if (empty($value))
         throw new RequiredValidationException();
@@ -39,7 +54,14 @@ function validate_empty($value){
         throw new RequiredValidationException();
 }
 
-function validate_array_contains($arr, $opciones)
+function validate_string_contains_in_array($str, $opciones)
+{
+    if(!in_array($str, $opciones)){
+        throw new RegExpValidationException();
+    }
+}
+
+function validate_array_contains_in_array($arr, $opciones)
 {
     foreach ($arr as $opcion) {
         if(!in_array($opcion, $opciones)){
