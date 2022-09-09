@@ -35,9 +35,13 @@
                     <label for="message">Mensaje</label>
                     <textarea id="message" name="message"></textarea>
                 </div>
-                <vue-recaptcha @verify="verifyMethod" sitekey="6Ldv9-EhAAAAAAEIO7a1EBOyQqqldppEDyfzl4eg"></vue-recaptcha>
-                <input type="hidden" :value="captchaResponse">
-                <input class="send-button" type="submit" value="Enviar" />
+                <div>
+                    <vue-recaptcha @verify="verifyMethod" sitekey="6Ldv9-EhAAAAAAEIO7a1EBOyQqqldppEDyfzl4eg"></vue-recaptcha>
+                    <input type="hidden" :value="captchaResponse">
+                </div>
+                <div>
+                    <input class="send-button" type="submit" value="Enviar" />
+                </div>
             </form>
         </div>
         <div class="image-container">

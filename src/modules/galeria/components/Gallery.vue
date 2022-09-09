@@ -49,139 +49,146 @@
 
 <style scoped>
   
-  section {
+section {
   margin-bottom: 7vw;
 }
 
-  .inactivo{
-    display: none !important; 
+.inactivo{
+  display: none !important; 
+}
+
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-faded-color);
+  z-index: 4;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
   }
-
-  .lightbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-faded-color);
-    z-index: 4;
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  100% {
+    opacity: 1;
   }
+}
 
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.lightbox .cerrar {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  color: white;
+}
 
-  .lightbox .cerrar {
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    color: white;
-  }
+.lightbox .cerrar button {
+  font-size: var(--font-size-2);
+  cursor: pointer;
+  background-color: inherit;
+  padding: 15px 50px;
+  border: none;
+}
 
-  .lightbox .cerrar button {
-    font-size: var(--font-size-2);
-    cursor: pointer;
-    background-color: inherit;
-    padding: 15px 50px;
-    border: none;
-  }
+.lightbox .cerrar button i {
+  color: white;
+}
 
-  .lightbox .cerrar button i {
-    color: white;
-  }
+.lightbox .grande {
 
-  .lightbox .grande {
+  margin-top: 30px;
+  height: 90%;
+  max-width: 80%;
+  background: white;
+}
 
-    margin-top: 30px;
-    height: 90%;
-    max-width: 80%;
-    background: white;
-  }
-
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px var(--main-margin-sides);
-    overflow: hidden;
-  }
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px var(--main-margin-sides);
+  overflow: hidden;
+}
 
 
-  img {
-  
-    padding: 10px 10px;
-    min-height: 150px;
-    max-height: 70vh;
-    height: 25vw;
-    object-fit: cover;
-    transition: all .5s ease;
-    overflow: hidden;
-  }
+img {
 
-  section img:hover {
+  padding: 10px 10px;
+  min-height: 150px;
+  max-height: 70vh;
+  height: 25vw;
+  object-fit: cover;
+  transition: all .5s ease;
+  overflow: hidden;
+}
+
+section img:hover {
+  transform: scale(1.05);
+}
+
+#imagen-1{
+  width: 35%;
+  animation: 1s expand infinite alternate; 
+}
+
+@keyframes expand {
+  100% {
     transform: scale(1.05);
   }
+}
 
-  #imagen-1{
-    width: 35%;
-  }
+#imagen-2{
+  width: 25%;
+}
 
-  #imagen-2{
-    width: 25%;
-  }
+#imagen-3{
+  width: 40%;
+}
 
-  #imagen-3{
-    width: 40%;
-  }
+#imagen-4{
+  width: 70%;
+}
 
-  #imagen-4{
-    width: 70%;
-  }
+#imagen-5{
+  width: 30%;
+}
 
-  #imagen-5{
-    width: 30%;
-  }
+#imagen-6{
+  width: 25%;
+}
 
-  #imagen-6{
-    width: 25%;
-  }
+#imagen-7{
+  width: 30%;
+}
 
-  #imagen-7{
-    width: 30%;
-  }
+#imagen-8{
+  width: 45%;
+}
 
-  #imagen-8{
-    width: 45%;
-  }
+#imagen-9{
+  width: 45%;
+}
 
-  #imagen-9{
-    width: 45%;
-  }
+#imagen-10{
+  width: 55%;
+}
 
-  #imagen-10{
-    width: 55%;
-  }
+#imagen-11{
+  width: 70%;
+}
 
-  #imagen-11{
-    width: 70%;
-  }
+#imagen-12{
+  width: 30%;
+}
 
-  #imagen-12{
-    width: 30%;
-  }
-
-  #imagen-13{
-    width: 100%;
-  }
+#imagen-13{
+  width: 100%;
+}
 </style>

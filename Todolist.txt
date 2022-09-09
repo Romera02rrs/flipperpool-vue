@@ -1,0 +1,6 @@
+TODO: Que todas las imágenes se puedan ampliar
+TODO: El menú tiene que expandirse y el hamburguer solo debe estar en moviles
+TODO: Validación del formulario en el cliente
+TODO: Obtener reseñas de google
+TODO: Página de empresa con el recorte de periódico
+TODO: Ordenar todo el código;
