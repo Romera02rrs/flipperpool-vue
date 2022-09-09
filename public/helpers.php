@@ -34,13 +34,10 @@ function validate_email(string $string)
 
 function validate_telephone(string $number)
 {
-    
-    $number = intval($number);
     if (empty($number))
         throw new RequiredValidationException();
-    if (!filter_var($number, FILTER_VALIDATE_INT));
+    if (!is_numeric($number));
         throw new ValidationException();
-    $number = strval($number);
     if (strlen($number) > 9)
         throw new TooLongValidationException();
         if (strlen($number) < 9)
