@@ -1,4 +1,3 @@
-import Header from '@/components/Header.vue';
 <template>
   <header>
     <!-- <video v-if="home" autoplay muted loop>
@@ -11,22 +10,22 @@ import Header from '@/components/Header.vue';
     -->
 
     <div class="imagen-header-container">
-      <img
-        class="imagen-header"
-        :alt="imgProps.alt"
-        :src="imgProps.src"
-      />
+      <img class="imagen-header" :alt="imgProps.alt" :src="imgProps.src" />
     </div>
     <div class="content-header">
       <nav id="nav">
-        <router-link to="/"><img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool" /></router-link>
-        <input type="checkbox" id="check" v-on:click="muestraModal"/>
+        <router-link to="/"
+          ><img class="logo" src="@/assets/img/logo.png" alt="Logo Flipperpool"
+        /></router-link>
+        <input type="checkbox" id="check" v-on:click="muestraModal" />
         <label for="check" class="bar-btn">
           <i class="fas fa-bars"></i>
         </label>
         <div class="nav-menu" style="display: none">
           <div class="close-button-container">
-            <button v-on:click="cierraModal" class="close-button"><i class="fa-solid fa-xmark"></i></button>
+            <button v-on:click="cierraModal" class="close-button">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
           </div>
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
@@ -40,8 +39,12 @@ import Header from '@/components/Header.vue';
       <div class="titulo-header">
         <h1 v-html="title"></h1>
         <div v-if="home" class="btn-header">
-          <router-link to="contacto"><div>Contacto</div></router-link>
-           <router-link to="galeria"><div>Galería</div></router-link>
+          <router-link to="contacto">
+            <div>Contacto</div>
+          </router-link>
+          <router-link to="galeria">
+            <div>Galería</div>
+          </router-link>
         </div>
       </div>
     </div>
@@ -49,18 +52,17 @@ import Header from '@/components/Header.vue';
 </template>
 
 <script>
-
-let fontSize
+let fontSize;
 
 export default {
   computed: {
-    calcularFontSize(){
+    calcularFontSize() {
       if (this.home) {
-        return this.fontSize = 'var(--font-size-2)'
-      }else{
-        return this.fontSize = 'var(--font-size-1)'
+        return (this.fontSize = "var(--font-size-2)");
+      } else {
+        return (this.fontSize = "var(--font-size-1)");
       }
-    }
+    },
   },
   props: {
     home: {
@@ -77,16 +79,15 @@ export default {
   methods: {
     muestraModal() {
       const nav = document.querySelector(".nav-menu");
-      nav.setAttribute('style', '')
+      nav.setAttribute("style", "");
     },
     cierraModal() {
-      const modal = document.querySelector(".nav-menu")
-      modal.setAttribute('style', 'display: none')
-    }
-  }
+      const modal = document.querySelector(".nav-menu");
+      modal.setAttribute("style", "display: none");
+    },
+  },
 };
 </script>
-
 
 <style scoped>
 header {
@@ -168,19 +169,19 @@ nav {
   text-align: center;
   margin: 0;
 
-
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .close-button-container {
@@ -197,11 +198,11 @@ nav {
   color: white;
 }
 
-.nav-options{
+.nav-options {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //padding: 22vh 0 0 0;
+  /* padding: 22vh 0 0 0; */
   padding: 10vh 0 0 0;
   height: 50%;
 }
@@ -244,8 +245,8 @@ a {
 
 .btn-header div {
   width: 110px;
-    height: 40px;
-    font-size: 20px;
+  height: 40px;
+  font-size: 20px;
   margin-right: 10px;
   font-family: Default-Light;
   display: flex;
@@ -283,5 +284,4 @@ a {
   margin-right: var(--main-margin-sides);
   color: #fff;
 }
-
 </style>

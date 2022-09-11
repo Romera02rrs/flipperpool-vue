@@ -1,18 +1,16 @@
 <template>
   <section>
-    <headline-group
-        sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
-        sectionSubTitle="No se quede sin su piscina al mejor precio"
-        orientation="left"
-    />
+    <headline-group sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
+      sectionSubTitle="No se quede sin su piscina al mejor precio" orientation="left" />
     <div class="content">
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-            <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg" loading="lazy">
+          <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+            loading="lazy">
         </div>
       </div>
-      <form  @submit.prevent="onSubmit" class="form" method="post" action="procesaEmail.php">
+      <form @submit.prevent="onSubmit" class="form" method="post" action="procesaEmail.php">
         <label for="correo">Introduzca su correo electrónico</label>
         <hr>
         <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com">
@@ -21,7 +19,8 @@
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-            <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg" loading="lazy">
+          <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+            loading="lazy">
         </div>
       </div>
     </div>
@@ -32,17 +31,17 @@
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 export default {
   data() {
-    return { 
+    return {
       inputData: null
     }
   },
   methods: {
-   
+
     onSubmit(value) {
 
       let email = (value.target[0].value);
-      
-      this.$router.push({name: 'contacto', params: {completedEmail: email}})
+
+      this.$router.push({ name: 'contacto', params: { completedEmail: email } })
     }
   },
   components: { HeadlineGroup },
@@ -50,14 +49,13 @@ export default {
 </script>
 
 <style scoped>
-
 section {
   margin-bottom: 7vw;
 }
 
 .content {
   display: flex;
-  //flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: space-between;
   margin: 0px var(--second-margin-sides);
 }
@@ -71,7 +69,7 @@ img {
 }
 
 .back-image {
- position: relative;
+  position: relative;
 }
 
 .front-image-right {
@@ -123,12 +121,10 @@ input {
   border: 1px solid white;
 }
 
-.btn:hover {
-  
-}
+.btn:hover {}
 
 .btn:hover {
-    
+
   border: 1px solid black;
   transition: all 0.5s;
   color: black;
@@ -140,5 +136,4 @@ input {
   right: 4vw;
   border: 2px solid #fff;
 }
-
 </style>
