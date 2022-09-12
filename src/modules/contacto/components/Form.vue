@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 import { VueRecaptcha } from "vue-recaptcha";
 export default {

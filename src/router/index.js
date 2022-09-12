@@ -21,6 +21,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "contacto" */ '@/modules/contacto/views/ContactoView.vue')
   },
   {
+    path: '/empresa',
+    name: 'empresa',
+    component: () => import(/* webpackChunkName: "empresa" */ '@/modules/empresa/views/EmpresaView.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'noPageFound',
     component: () => import(/* webpackChunkName: "noPageFound" */ '@/views/NoPageFound.vue')

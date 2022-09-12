@@ -29,7 +29,7 @@
           </div>
           <div class="nav-options">
             <router-link to="/">Inicio</router-link>
-            <!-- <router-link to="/empresa">Empresa</router-link> -->
+            <router-link to="/empresa">Empresa</router-link>
             <router-link to="galeria">Galería</router-link>
             <!-- <router-link to="/about">Ofertas</router-link> -->
             <router-link to="contacto">Contacto</router-link>
