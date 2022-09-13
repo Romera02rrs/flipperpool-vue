@@ -16,8 +16,9 @@
 <script>
 
 export default {
-  props: ['click'],
-  openLightbox() {
+  props: ['abrir'],
+  methods: {
+    openLightbox(e) {
     console.log("llego");
     let nav = document.getElementById("nav");
     nav.setAttribute("style", "display: none");
@@ -28,7 +29,6 @@ export default {
     lightbox.classList.remove("inactivo");
     imagen.setAttribute("src", src);
   },
-  methods: {
     cerrar() {
       let lightbox = document.getElementById("lightbox");
       let imagen = document.getElementById("imagenLightbox");
