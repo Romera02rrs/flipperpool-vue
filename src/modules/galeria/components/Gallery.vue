@@ -1,145 +1,38 @@
 <template>
   <section>
-    <img
-      @click="openLightbox"
-      id="imagen-1"
-      src="../assets/galeria-1.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-2"
-      src="../assets/galeria-2.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-3"
-      src="../assets/galeria-3.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-4"
-      src="../assets/galeria-4.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-5"
-      src="../assets/galeria-5.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-6"
-      src="../assets/galeria-6.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-7"
-      src="../assets/galeria-7.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-8"
-      src="../assets/galeria-8.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-9"
-      src="../assets/galeria-9.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-10"
-      src="../assets/galeria-10.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-11"
-      src="../assets/galeria-11.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-12"
-      src="../assets/galeria-12.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
-    <img
-      @click="openLightbox"
-      id="imagen-13"
-      src="../assets/galeria-13.jpg"
-      alt="Piscina"
-      loading="lazy"
-    />
+    <img @click="openLightbox = $event" id="imagen-1" src="../assets/galeria-1.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-2" src="../assets/galeria-2.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-3" src="../assets/galeria-3.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-4" src="../assets/galeria-4.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-5" src="../assets/galeria-5.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-6" src="../assets/galeria-6.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-7" src="../assets/galeria-7.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-8" src="../assets/galeria-8.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-9" src="../assets/galeria-9.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-10" src="../assets/galeria-10.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-11" src="../assets/galeria-11.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-12" src="../assets/galeria-12.jpg" alt="Piscina" loading="lazy" />
+    <img @click="openLightbox = $event" id="imagen-13" src="../assets/galeria-13.jpg" alt="Piscina" loading="lazy" />
   </section>
-  <!-- <Lightbox :abrir="openLightbox" /> -->
-  <div class="lightbox inactivo" id="lightbox">
-    <div class="cerrar">
-      <button @click="cerrar"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-
-    <img
-      id="imagenLightbox"
-      class="grande"
-      src=""
-      alt="Piscina"
-    />
-  </div>
+  <Lightbox :dataImage="openLightbox" />
 </template>
 
 <script>
-// import Lightbox from "@/components/Lightbox.vue";
+import Lightbox from "@/components/Lightbox.vue";
 export default {
-  methods: {
-    openLightbox(e) {
-    let nav = document.getElementById("nav");
-    nav.setAttribute("style", "display: none");
-    let lightbox = document.getElementById("lightbox");
-    let imagen = document.getElementById("imagenLightbox");
-    let src = e.target.src;
-
-    lightbox.classList.remove("inactivo");
-    imagen.setAttribute("src", src);
+  components: {
+    Lightbox
   },
-    cerrar() {
-      let lightbox = document.getElementById("lightbox");
-      let imagen = document.getElementById("imagenLightbox");
-
-      nav.setAttribute("style", "");
-      lightbox.classList.add("inactivo");
-      imagen.setAttribute("src", "");
+  data(){ 
+    return {
+      openLightbox: '',
     }
   }
-
-  // components: {
-  //   Lightbox
-  // }
 }
 
 </script>
 
 <style scoped>
-
 .inactivo {
   display: none !important;
 }
@@ -164,6 +57,7 @@ export default {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

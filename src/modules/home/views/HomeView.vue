@@ -18,15 +18,15 @@ import InputEmail from '../components/InputEmail.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  components: { 
-    Header, 
-    TransitionalMosaic, 
-    ParallaxImage, 
+  components: {
+    Header,
+    TransitionalMosaic,
+    ParallaxImage,
     MultiMosaic,
     ReviewsGallery,
     InputEmail,
-    Footer
-  },
+    Footer,
+},
 }
 </script>
 
