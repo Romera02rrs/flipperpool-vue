@@ -14,7 +14,7 @@
     <img @click="openLightbox = $event" id="imagen-12" src="../assets/galeria-12.jpg" alt="Piscina" loading="lazy" />
     <img @click="openLightbox = $event" id="imagen-13" src="../assets/galeria-13.jpg" alt="Piscina" loading="lazy" />
   </section>
-  <Lightbox :dataImage="openLightbox" />
+  <Lightbox :dataImage="openLightbox" :index="index" />
 </template>
 
 <script>
@@ -88,9 +88,6 @@ export default {
   max-width: 80%;
   background: white;
 }
-
-
-
 
 section {
   margin-bottom: 7vw;

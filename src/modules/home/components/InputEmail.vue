@@ -1,7 +1,10 @@
 <template>
   <section>
-    <headline-group sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
-      sectionSubTitle="No se quede sin su piscina al mejor precio" orientation="left" />
+    <headline-group 
+      sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
+      sectionSubTitle="No se quede sin su piscina al mejor precio"
+      orientation="left" 
+    />
     <div class="content">
       <div>
         <div class="back-image">
