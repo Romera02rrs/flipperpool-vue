@@ -9,36 +9,54 @@
       <i @click="nextLightboxImage('right')" class="fa-solid fa-angle-right margin-righ-arrow"></i>
     </div>
   </div>
-
 </template>
 
 <script>
+
 export default {
   props: ['dataImage'],
-  updated() {
-    this.openLightbox()
+  data() {
+    return {
+      viewImage: '',
+    }
   },
   methods: {
-    openLightbox() {
-      let nav = document.getElementById("nav");
-      nav.setAttribute("style", "display: none");
-      let lightbox = document.getElementById("lightbox");
-      let imagen = document.getElementById("imagenLightbox");
-      let src = this.dataImage.target.src;
+    openLightbox(id) {
 
-      lightbox.classList.remove("inactivo");
-      imagen.setAttribute("src", src);
+      this.viewImage = document.getElementById(id)
+      let nav = document.getElementById("nav")
+      nav.setAttribute("style", "display: none")
+      let lightbox = document.getElementById("lightbox")
+      let imagen = document.getElementById("imagenLightbox")
+      let src = this.viewImage.src
+
+      lightbox.classList.remove("inactivo")
+      imagen.setAttribute("src", src)
     },
     cerrar() {
-      let lightbox = document.getElementById("lightbox");
-      let imagen = document.getElementById("imagenLightbox");
+      let lightbox = document.getElementById("lightbox")
+      let imagen = document.getElementById("imagenLightbox")
 
-      nav.setAttribute("style", "");
-      lightbox.classList.add("inactivo");
-      imagen.setAttribute("src", "");
+      nav.setAttribute("style", "")
+      lightbox.classList.add("inactivo")
+      imagen.setAttribute("src", "")
+    },
+    nextLightboxImage(orientation) {
+
+      const nextId = (orientation === 'right') ? (parseInt(this.viewImage.id.split('-')[1]) + 1) : (parseInt(this.viewImage.id.split('-')[1]) - 1)
+
+      let imagen = document.getElementById("imagenLightbox")
+      let nextImage = document.getElementById(`imagen-${nextId}`)
+
+      if (!nextImage) return
+
+      let nextSrc = nextImage.src
+
+      imagen.setAttribute("src", nextSrc)
+      this.viewImage = document.getElementById(`imagen-${nextId}`)
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -96,6 +114,7 @@ export default {
   align-items: center;
   justify-content: space-around;
   display: flex;
+  max-height: 80vh;
 }
 
 .imagenLightbox-container i {
@@ -122,6 +141,7 @@ export default {
   background: white;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 img {

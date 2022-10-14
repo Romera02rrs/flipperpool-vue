@@ -32,8 +32,8 @@
       <p><a href="tel:+34661260491">661-260-491</a></p>
     </div>
     <div class="box">
-      <a class="btn">Contactar</a>
-      <a class="btn">Privacidad</a>
+      <router-link to="/contacto" class="btn">Contactar</router-link>
+      <router-link to="/home" class="btn">Privacidad</router-link>
     </div>
   </div>
 </template>
@@ -92,7 +92,12 @@ i {
   margin: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
+  color: black;
   display: block;
   border: 1px solid;
   padding: 5px 20px;

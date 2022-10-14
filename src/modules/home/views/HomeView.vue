@@ -1,10 +1,13 @@
 <template>
-  <Header :home="true" :imgProps="{alt: 'Piscina elegante con muros de piedra', src: require('@/modules/home/assets/piscinaMuroPiedra.jpg')}" title="Su Felicidad<br> En Construcción" />
-  <transitional-mosaic />
+  <Header :home="true"
+    :imgProps="{alt: 'Piscina elegante con muros de piedra', src: require('@/modules/home/assets/piscinaMuroPiedra.jpg')}"
+    title="Su Felicidad<br> En Construcción" />
+  <transitional-mosaic :imageId="openLightbox" />
   <parallax-image />
-  <multi-mosaic />
+  <multi-mosaic :imageId="openLightbox"/>
   <reviews-gallery />
-  <input-email />
+  <input-email :imageId="openLightbox"/>
+  <Lightbox ref="lightbox" />
   <Footer />
 </template>
 
@@ -15,6 +18,7 @@ import ParallaxImage from '../components/ParallaxImage.vue'
 import MultiMosaic from '../components/MultiMosaic.vue'
 import ReviewsGallery from '../components/ReviewsGallery.vue'
 import InputEmail from '../components/InputEmail.vue'
+import Lightbox from '@/components/Lightbox.vue';
 import Footer from '@/components/Footer.vue'
 
 export default {
@@ -25,11 +29,23 @@ export default {
     MultiMosaic,
     ReviewsGallery,
     InputEmail,
+    Lightbox,
     Footer,
-},
+  },
+  data() {
+    return {
+      lightboxEvent: null,
+      dataImagen: null
+    }
+  },
+  methods: {
+    openLightbox(id) {
+      this.$refs.lightbox.openLightbox(id);
+    }
+  }
 }
 </script>
 
 <style scoped>
-    
+
 </style>

@@ -1,16 +1,14 @@
 <template>
   <section>
-    <headline-group 
-      sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
-      sectionSubTitle="No se quede sin su piscina al mejor precio"
-      orientation="left" 
-    />
+    <headline-group sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
+      sectionSubTitle="Disfrute de su piscina al mejor precio" orientation="left" />
     <div class="content">
       <div>
         <div class="back-image">
-          <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-          <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+          <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg" id="imagen-10" @click="sendImageId"
             loading="lazy">
+          <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+            id="imagen-11" @click="sendImageId" loading="lazy">
         </div>
       </div>
       <form @submit.prevent="onSubmit" class="form" method="post" action="procesaEmail.php">
@@ -21,9 +19,10 @@
       </form>
       <div>
         <div class="back-image">
-          <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg">
-          <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+          <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg" id="imagen-12" @click="sendImageId"
             loading="lazy">
+          <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
+            id="imagen-13" @click="sendImageId" loading="lazy">
         </div>
       </div>
     </div>
@@ -33,13 +32,16 @@
 <script>
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 export default {
+  props: ['imageId'],
   data() {
     return {
       inputData: null
     }
   },
   methods: {
-
+    sendImageId({ target: { id } }) {
+      this.imageId(id)
+    },
     onSubmit(value) {
 
       let email = (value.target[0].value);
@@ -49,6 +51,9 @@ export default {
   },
   components: { HeadlineGroup },
 };
+
+
+
 </script>
 
 <style scoped>

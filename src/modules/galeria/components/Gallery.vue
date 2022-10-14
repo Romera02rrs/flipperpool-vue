@@ -1,20 +1,32 @@
 <template>
   <section>
-    <img @click="openLightbox = $event" id="imagen-1" src="../assets/galeria-1.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-2" src="../assets/galeria-2.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-3" src="../assets/galeria-3.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-4" src="../assets/galeria-4.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-5" src="../assets/galeria-5.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-6" src="../assets/galeria-6.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-7" src="../assets/galeria-7.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-8" src="../assets/galeria-8.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-9" src="../assets/galeria-9.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-10" src="../assets/galeria-10.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-11" src="../assets/galeria-11.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-12" src="../assets/galeria-12.jpg" alt="Piscina" loading="lazy" />
-    <img @click="openLightbox = $event" id="imagen-13" src="../assets/galeria-13.jpg" alt="Piscina" loading="lazy" />
+    <div class="video-container">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/KuSSOZxzYWs" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/5MrvfUIV04M" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <img @click="sendImageId" id="imagen-1" src="../assets/galeria-1.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-2" src="../assets/galeria-2.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-3" src="../assets/galeria-3.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-4" src="../assets/galeria-4.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-5" src="../assets/galeria-5.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-6" src="../assets/galeria-6.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-7" src="../assets/galeria-7.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-8" src="../assets/galeria-8.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-9" src="../assets/galeria-9.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-10" src="../assets/galeria-10.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-11" src="../assets/galeria-11.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-12" src="../assets/galeria-12.jpg" alt="Piscina" loading="lazy" />
+    <img @click="sendImageId" id="imagen-13" src="../assets/galeria-13.jpg" alt="Piscina" loading="lazy" />
   </section>
-  <Lightbox :dataImage="openLightbox" :index="index" />
+  <Lightbox ref="lightbox" />
 </template>
 
 <script>
@@ -23,36 +35,20 @@ export default {
   components: {
     Lightbox
   },
-  data(){ 
+  data() {
     return {
-      openLightbox: '',
+      lightboxEvent: ''
+    }
+  },
+  methods: {
+    sendImageId({ target: { id } }) {
+      this.$refs.lightbox.openLightbox(id)
     }
   }
 }
-
 </script>
 
 <style scoped>
-.inactivo {
-  display: none !important;
-}
-
-.lightbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--main-faded-color);
-  z-index: 4;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -61,32 +57,6 @@ export default {
   100% {
     opacity: 1;
   }
-}
-
-.lightbox .cerrar {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  color: white;
-}
-
-.lightbox .cerrar button {
-  font-size: var(--font-size-2);
-  cursor: pointer;
-  background-color: inherit;
-  padding: 15px 50px;
-  border: none;
-}
-
-.lightbox .cerrar button i {
-  color: white;
-}
-
-.lightbox .grande {
-  margin-top: 30px;
-  height: 90%;
-  max-width: 80%;
-  background: white;
 }
 
 section {
@@ -99,6 +69,45 @@ section {
   justify-content: center;
   margin: 50px var(--main-margin-sides);
   overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  min-height: 150px;
+  max-height: 70vh;
+  height: 25vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video {
+  height: 100%;
+  width: 50%;
+  padding: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%;
+    min-height: 300px;
+    max-height: 140vh;
+    height: 50vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .video {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 img {

@@ -3,27 +3,25 @@
         <headline-group sectionTitle="Un amplio historial<br>de ejemplos" sectionSubTitle="Mire nuestras piscinas"
             orientation="left" />
         <div class="mosaic">
-            <img @click="openLightbox = $event" src="../assets/02.jpg"
-                alt="Piscina" loading="lazy">
-            <img src="../assets/01.jpg" alt="Piscina" loading="lazy">
-            <img src="../assets/03.jpg" alt="Piscina" loading="lazy">
-            <img src="../assets/06.jpg" alt="Piscina" loading="lazy">
-            <img src="../assets/04.jpg" alt="Piscina" loading="lazy">
-            <img src="../assets/05.jpg" alt="Piscina" loading="lazy">
+            <img @click="sendImageId" src="../assets/02.jpg" alt="Piscina" id="imagen-4" loading="lazy">
+            <img @click="sendImageId" src="../assets/01.jpg" alt="Piscina" id="imagen-5" loading="lazy">
+            <img @click="sendImageId" src="../assets/03.jpg" alt="Piscina" id="imagen-6" loading="lazy">
+            <img @click="sendImageId" src="../assets/06.jpg" alt="Piscina" id="imagen-7" loading="lazy">
+            <img @click="sendImageId" src="../assets/04.jpg" alt="Piscina" id="imagen-8" loading="lazy">
+            <img @click="sendImageId" src="../assets/05.jpg" alt="Piscina" id="imagen-9" loading="lazy">
         </div>
     </section>
-    <Lightbox :dataImage="openLightbox" />
 </template>
 
 <script>
 import HeadlineGroup from '@/components/HeadlineGroup.vue';
-import Lightbox from '@/components/Lightbox.vue';
 
 export default {
-    components: { HeadlineGroup, Lightbox },
-    data() {
-        return {
-            openLightbox: ''
+    components: { HeadlineGroup },
+    props: ['imageId'],
+    methods: {
+        sendImageId({target:{id}}){
+            this.imageId(id)
         }
     }
 }
