@@ -1,10 +1,7 @@
 <template>
   <section>
-    <headline-group
-      sectionTitle="Una larga experiencia<br>en el sector"
-      sectionSubTitle="La mayor calidad y durabilidad a su alcance"
-      orientation="right"
-    />
+    <headline-group sectionTitle="Una larga experiencia<br>en el sector"
+      sectionSubTitle="La mayor calidad y durabilidad a su alcance" orientation="right" />
     <div class="image-container">
       <img src="../assets/levantar.jpg">
       <div class="content">
@@ -22,7 +19,6 @@ export default {
 </script>
 
 <style scoped>
-
 .image-container {
   width: 100%;
   min-height: 300px;
@@ -54,10 +50,10 @@ img {
 
 h5 {
   text-align: center;
-  font-size: var(--font-size-4); /*TODO: No usar medidas absoultas*/
+  font-size: var(--font-size-4);
+  /*TODO: No usar medidas absoultas*/
   color: white;
   margin: 15px;
   line-height: var(--font-size-3);
 }
-
 </style>
