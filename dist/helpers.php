@@ -36,7 +36,7 @@ function validate_telephone(string $number)
 {
     if (empty($number))
         throw new RequiredValidationException();
-    if (!is_numeric($number))
+    if (!is_numeric($number));
         throw new ValidationException();
     if (strlen($number) > 9)
         throw new TooLongValidationException();
