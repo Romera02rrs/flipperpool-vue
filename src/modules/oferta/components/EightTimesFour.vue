@@ -1,9 +1,10 @@
 <template>
     <section>
+        <router-link to="contacto">
         <headline-group sectionTitle="Haga click en la oferta<br>y pida su presupuesto"
             sectionSubTitle="Un año lleno de nuevas alegrías" orientation="left" />
-        <router-link to="contacto">
-            <img src="../assets/OfertaBanner.png" alt="Oferta piscina 10.850€ medida 8x4">
+        
+            <img src="../assets/OfertaBanner-min.png" alt="Oferta piscina 10.850€ medida 8x4">
         </router-link>
     </section>
     <input-email />
@@ -23,6 +24,10 @@ img {
     width: 100%;
     height: 100%;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media (min-width: 362px) {}
