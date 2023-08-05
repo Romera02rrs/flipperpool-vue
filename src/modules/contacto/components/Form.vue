@@ -1,53 +1,46 @@
 <template>
   <section>
-    <headline-group
-      sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
-      sectionSubTitle="No se quede sin su piscina al mejor precio"
-      orientation="left"
-    />
+    <headline-group sectionTitle="Póngase en contacto<br>Flipper Pool le espera"
+      sectionSubTitle="No se quede sin su piscina al mejor precio" orientation="left" />
     <div class="content">
       <div class="form-container">
         <form action="procesaEmail.php" method="post">
           <div>
             <label for="name">Nombre</label>
-            <input id="name" type="text" name="name" />
+            <input id="name" type="text" name="name" required />
           </div>
 
           <div>
             <label for="email">Correo</label>
-            <input
-              v-if="completedEmail"
-              :value="completedEmail"
-              id="email"
-              type="email"
-              name="email"
-            />
-            <input v-else id="email" type="email" name="email" />
+            <input v-if="completedEmail" :value="completedEmail" id="email" type="email" name="email" />
+            <input v-else id="email" type="email" name="email" required />
           </div>
 
           <div>
             <label for="tel">Teléfono</label>
-            <input id="tel" type="tel" name="tel" />
+            <input id="tel" type="tel" name="tel" required />
           </div>
 
           <div class="select-container">
-            <select name="address">
+            <select name="address" required>
               <option selected disabled>Provincia</option>
-              <option v-for="provincia in provincias" :value="provincia">
+              <option v-for="provincia in provincias" :value="provincia" :key="provincia">
                 {{ provincia }}
               </option>
             </select>
           </div>
 
+          <div>
+            <label for="city">Ciudad/Pueblo</label>
+            <input v-model="city" id="city" type="text" name="city" required />
+          </div>
+
           <div class="double-column">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" required></textarea>
           </div>
           <div class="double-column">
-            <vue-recaptcha
-              @verify="verifyMethod"
-              sitekey="6Ldv9-EhAAAAAAEIO7a1EBOyQqqldppEDyfzl4eg"
-            >
+            <vue-recaptcha @verify="verifyMethod" sitekey="6Ldv9-EhAAAAAAEIO7a1EBOyQqqldppEDyfzl4eg">
             </vue-recaptcha>
             <input type="hidden" :value="captchaResponse" />
           </div>
@@ -69,59 +62,13 @@ import { VueRecaptcha } from "vue-recaptcha";
 export default {
   data() {
     return {
-      captchaResponse: String,
+      captchaResponse: "",
       provincias: [
-        // "A Coruña",
-        // "Álava",
-        // "Albacete",
         "Alicante",
-        // "Almería",
-        // "Asturias",
-        // "Ávila",
-        // "Badajoz",
-        // "Baleares",
-        // "Barcelona",
-        // "Burgos",
-        // "Cáceres",
-        // "Cádiz",
-        // "Cantabria",
         "Castellón",
-        // "Ciudad Real",
-        // "Córdoba",
-        // "Cuenca",
-        // "Girona",
-        // "Granada",
-        // "Guadalajara",
-        // "Gipuzkoa",
-        // "Huelva",
-        // "Huesca",
-        // "Jaén",
-        // "La Rioja",
-        // "Las Palmas",
-        // "León",
-        // "Lérida",
-        // "Lugo",
-        // "Madrid",
-        // "Málaga",
-        // "Murcia",
-        // "Navarra",
-        // "Ourense",
-        // "Palencia",
-        // "Pontevedra",
-        // "Salamanca",
-        // "Segovia",
-        // "Sevilla",
-        // "Soria",
-        // "Tarragona",
-        // "Santa Cruz de Tenerife",
-        // "Teruel",
-        // "Toledo",
         "Valencia",
-        // "Valladolid",
-        // "Vizcaya",
-        // "Zamora",
-        // "Zaragoza",
       ],
+      city: "", // Nuevo dato para la ciudad/pueblo
     };
   },
   props: {
@@ -148,7 +95,6 @@ export default {
 </script>
 
 <style scoped>
-
 section {
   margin-bottom: 7vw;
 }

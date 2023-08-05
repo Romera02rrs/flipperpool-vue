@@ -8,8 +8,8 @@
           id="imagen-1" @click="sendImageId" loading="lazy">
       </div>
       <div>
-        <img src="../assets/atzubia_2.jpeg" alt="Piscina completamente gunitada" id="imagen-2"
-          @click="sendImageId" loading="lazy">
+        <img src="../assets/atzubia_2.jpeg" alt="Piscina completamente gunitada" id="imagen-2" @click="sendImageId"
+          loading="lazy">
 
       </div>
       <div>

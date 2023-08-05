@@ -20,7 +20,7 @@ export default {
     components: { HeadlineGroup },
     props: ['imageId'],
     methods: {
-        sendImageId({target:{id}}){
+        sendImageId({ target: { id } }) {
             this.imageId(id)
         }
     }

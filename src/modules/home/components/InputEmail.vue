@@ -6,23 +6,23 @@
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg" id="imagen-10" @click="sendImageId"
-            loading="lazy">
+            loading="lazy" />
           <img class="front-image-right" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
-            id="imagen-11" @click="sendImageId" loading="lazy">
+            id="imagen-11" @click="sendImageId" loading="lazy" />
         </div>
       </div>
       <form @submit.prevent="onSubmit" class="form" method="post" action="procesaEmail.php">
         <label for="correo">Introduzca su correo electrónico</label>
-        <hr>
-        <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com">
+        <hr />
+        <input :value="inputData" type="email" name="correo" id="correo" placeholder="example@info.com" />
         <button type="submit" class="btn">Contactar</button>
       </form>
       <div>
         <div class="back-image">
           <img alt="Fondo de piscinca" src="../assets/fondoPiscinaPiña.jpg" id="imagen-12" @click="sendImageId"
-            loading="lazy">
+            loading="lazy" />
           <img class="front-image-left" alt="Piscina con vistas a la montaña" src="../assets/piscinaVistasMontaña.jpg"
-            id="imagen-13" @click="sendImageId" loading="lazy">
+            id="imagen-13" @click="sendImageId" loading="lazy" />
         </div>
       </div>
     </div>
@@ -32,28 +32,27 @@
 <script>
 import HeadlineGroup from "@/components/HeadlineGroup.vue";
 export default {
-  props: ['imageId'],
+  props: ["imageId"],
   data() {
     return {
-      inputData: null
-    }
+      inputData: null,
+    };
   },
   methods: {
     sendImageId({ target: { id } }) {
-      this.imageId(id)
+      this.imageId(id);
     },
     onSubmit(value) {
+      let email = value.target[0].value;
 
-      let email = (value.target[0].value);
-
-      this.$router.push({ name: 'contacto', params: { completedEmail: email } })
-    }
+      this.$router.push({
+        name: "contacto",
+        params: { completedEmail: email },
+      });
+    },
   },
   components: { HeadlineGroup },
 };
-
-
-
 </script>
 
 <style scoped>
@@ -132,7 +131,6 @@ input {
 .btn:hover {}
 
 .btn:hover {
-
   border: 1px solid black;
   transition: all 0.5s;
   color: black;
