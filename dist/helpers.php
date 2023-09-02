@@ -40,7 +40,7 @@ function validate_telephone(string $number)
         throw new ValidationException();
     if (strlen($number) > 9)
         throw new TooLongValidationException();
-    if (strlen($number) < 9)
+        if (strlen($number) < 9)
         throw new TooShortValidationException();
 }
 

@@ -24,6 +24,7 @@ $aux["name"] = $_POST["name"] ?: "";
 $aux["email"] = $_POST["email"] ?: "";
 $aux["tel"] = $_POST["tel"] ?: "";
 $aux["address"] = $_POST["address"] ?? Array("Dirección no establecida");
+$aux["city"] = $_POST["city"] ?? Array("Población no establecida");
 $aux["message"] = $_POST["message"] ?: "";
 
 try {
@@ -59,6 +60,13 @@ try {
     $data["address"] = $aux["address"];
 }catch (ValidationException $e){
     $errores[] = "Dirección ({$e->getMessage()})";
+}
+
+try {
+    validate_string($aux["city"]);
+    $data["city"] = clean($aux["city"]);
+}catch (ValidationException $e){
+    $errores[] = "Mensaje ({$e->getMessage()})";
 }
 
 try {
@@ -118,6 +126,10 @@ if ($errores){
         <tr>
             <th>Dirección</th>
             <td>{$data["address"]}</td>
+        </tr>
+        <tr>
+            <th>Población</th>
+            <td>{$data["city"]}</td>
         </tr>
         <tr>
             <th>Mensaje</th>
