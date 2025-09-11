@@ -20,11 +20,11 @@ const routes = [
     props: true,
     component: () => import(/* webpackChunkName: "contacto" */ '@/modules/contacto/views/ContactoView.vue')
   },
-  {
-    path: '/oferta',
-    name: 'oferta',
-    component: () => import(/* webpackChunkName: "oferta" */ '@/modules/oferta/views/OfertaView.vue')
-  },
+  // {
+  //   path: '/oferta',
+  //   name: 'oferta',
+  //   component: () => import(/* webpackChunkName: "oferta" */ '@/modules/oferta/views/OfertaView.vue')
+  // },
   {
     path: '/:pathMatch(.*)*',
     name: 'noPageFound',
