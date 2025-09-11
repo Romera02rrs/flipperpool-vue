@@ -40,7 +40,7 @@
 
 :root {
   --main-color: #8cccff;
-  --main-faded-color: #8cccffaa;
+  --main-faded-color:rgba(140, 203, 255, 0.88);
   --second-color: rgb(52, 120, 246);
   --main-margin-sides: 30px;
   --second-margin-sides: 15px;
