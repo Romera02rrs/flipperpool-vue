@@ -65,7 +65,7 @@ export default {
       captchaResponse: "",
       provincias: [
         "Alicante",
-        "Castellón",
+        //"Castellón",
         "Valencia",
       ],
       city: "", // Nuevo dato para la ciudad/pueblo
